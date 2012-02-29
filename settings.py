@@ -114,9 +114,9 @@ TEMPLATE_DIRS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     # required by django.contrib.admin anyway
-    "django.core.context_processors.auth",
+    #"django.core.context_processors.auth",
     # required by grappelli
-    #"django.core.context_processors.request",
+    "django.core.context_processors.request",
     'django.contrib.auth.context_processors.auth',
 
     # required to render correct templates (grappelli+admin-tools or grappelli "standalone")
@@ -127,6 +127,7 @@ GRAPPELLI_ADMIN_TITLE = 'My Base Example Application'
 
 INSTALLED_APPS = (
     'grappelli',
+    'filebrowser',
 
     # if you use admin_tools
     'admin_tools.theming',
@@ -218,7 +219,7 @@ CKEDITOR_CONFIGS = {
 
 TINYMCE_DEFAULT_CONFIG={
     'theme': "advanced",
-    'mode': "textareas",
+    #'mode': "textareas", #set all TextField tiny_mce editor
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
 }
