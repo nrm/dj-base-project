@@ -217,8 +217,23 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+TINYMCE_PLUGINS = [
+    'safari',
+    'table',
+    'advlink',
+    'advimage',
+    'iespell',
+    'inlinepopups',
+    'media',
+    'searchreplace',
+    'contextmenu',
+    'paste',
+    'wordcount'
+]
+
 TINYMCE_DEFAULT_CONFIG={
     'theme': "advanced",
+    'plugins' : ",".join(TINYMCE_PLUGINS), # django-cms
     #'mode': "textareas", #set all TextField tiny_mce editor
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
