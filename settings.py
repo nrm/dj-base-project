@@ -67,7 +67,8 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+#ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -111,7 +112,27 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates'),
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    # required by django.contrib.admin anyway
+    "django.core.context_processors.auth",
+    # required by grappelli
+    #"django.core.context_processors.request",
+    'django.contrib.auth.context_processors.auth',
+
+    # required to render correct templates (grappelli+admin-tools or grappelli "standalone")
+    #"grappelli.context_processors.admin_template_path",
+)
+
+GRAPPELLI_ADMIN_TITLE = 'My Base Example Application'
+
 INSTALLED_APPS = (
+    'grappelli',
+
+    # if you use admin_tools
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -124,6 +145,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'south',
+    'ckeditor',
+    'tinymce',
 
     'example',
 )
@@ -150,3 +173,60 @@ LOGGING = {
         },
     }
 }
+
+CKEDITOR_MEDIA_PREFIX = '/static/ckeditor/'
+CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            [      'Undo', 'Redo',
+              '-', 'Bold', 'Italic', 'Underline',
+              '-', 'Link', 'Unlink', 'Anchor',
+              '-', 'Format',
+              '-', 'SpellChecker', 'Scayt',
+              '-', 'Maximize',
+            ],
+            [      'HorizontalRule',
+              '-', 'Table',
+              '-', 'BulletedList', 'NumberedList',
+              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+              '-', 'SpecialChar',
+              '-', 'Source',
+              '-', 'About',
+            ]
+        ],
+        'width': 840,
+        'height': 300,
+        'toolbarCanCollapse': False,
+    },
+
+    'simple_toolbar': {
+        'toolbar': [
+            [ 'Bold', 'Italic', 'Underline' ],
+        ],
+        'width': 840,
+        'height': 300,
+    },
+
+    'full': {
+        'toolbar': 'Full',
+        'width': 840,
+        'height': 300,
+    },
+}
+
+TINYMCE_DEFAULT_CONFIG={
+    'theme': "advanced",
+    'mode': "textareas",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
+#TINYMCE_DEFAULT_CONFIG = {
+#    'plugins': "table,spellchecker,paste,searchreplace",
+#    'theme': "advanced",
+#    'cleanup_on_startup': True,
+#    'custom_undo_redo_levels': 10,
+#}
+#TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = False
