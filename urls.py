@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'source.views.home', name='home'),
+    url(r'^$', 'example.views.test', name='home'),
     # url(r'^source/', include('source.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
