@@ -1,1 +1,1 @@
-mkdir static media media/uploads templates
+mkdir static media media/uploads templates ../db

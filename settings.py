@@ -150,7 +150,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'south',
-    'ckeditor',
+    #'ckeditor',
     'tinymce',
 
     'example',
@@ -179,47 +179,47 @@ LOGGING = {
     }
 }
 
-CKEDITOR_MEDIA_PREFIX = '/static/ckeditor/'
-CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
-
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': [
-            [      'Undo', 'Redo',
-              '-', 'Bold', 'Italic', 'Underline',
-              '-', 'Link', 'Unlink', 'Anchor',
-              '-', 'Format',
-              '-', 'SpellChecker', 'Scayt',
-              '-', 'Maximize',
-            ],
-            [      'HorizontalRule',
-              '-', 'Table',
-              '-', 'BulletedList', 'NumberedList',
-              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
-              '-', 'SpecialChar',
-              '-', 'Source',
-              '-', 'About',
-            ]
-        ],
-        'width': 840,
-        'height': 300,
-        'toolbarCanCollapse': False,
-    },
-
-    'simple_toolbar': {
-        'toolbar': [
-            [ 'Bold', 'Italic', 'Underline' ],
-        ],
-        'width': 840,
-        'height': 300,
-    },
-
-    'full': {
-        'toolbar': 'Full',
-        'width': 840,
-        'height': 300,
-    },
-}
+#CKEDITOR_MEDIA_PREFIX = '/static/ckeditor/'
+#CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
+#
+#CKEDITOR_CONFIGS = {
+#    'default': {
+#        'toolbar': [
+#            [      'Undo', 'Redo',
+#              '-', 'Bold', 'Italic', 'Underline',
+#              '-', 'Link', 'Unlink', 'Anchor',
+#              '-', 'Format',
+#              '-', 'SpellChecker', 'Scayt',
+#              '-', 'Maximize',
+#            ],
+#            [      'HorizontalRule',
+#              '-', 'Table',
+#              '-', 'BulletedList', 'NumberedList',
+#              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+#              '-', 'SpecialChar',
+#              '-', 'Source',
+#              '-', 'About',
+#            ]
+#        ],
+#        'width': 840,
+#        'height': 300,
+#        'toolbarCanCollapse': False,
+#    },
+#
+#    'simple_toolbar': {
+#        'toolbar': [
+#            [ 'Bold', 'Italic', 'Underline' ],
+#        ],
+#        'width': 840,
+#        'height': 300,
+#    },
+#
+#    'full': {
+#        'toolbar': 'Full',
+#        'width': 840,
+#        'height': 300,
+#    },
+#}
 
 TINYMCE_PLUGINS = [
     'safari',
