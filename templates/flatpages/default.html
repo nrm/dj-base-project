@@ -1,0 +1,10 @@
+{% extends 'layouts/main-body.html' %}
+
+{% block hero-unit %}
+{% endblock %}
+
+{% block page_title %}{{ flatpage.title }}| {{ block.super }}{% endblock %}
+
+{% block body %}
+{{ flatpage.content }}
+{% endblock %}

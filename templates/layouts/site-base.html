@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{% block page_title %}Bootstrap HTML Project{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}images/apple-touch-icon.png">
+  </head>
+
+  <body>
+
+    <div class="container">
+        {% block navbar %}
+        
+        {% endblock %}
+			
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      {% block hero-unit %}
+      
+      {% endblock %}
+
+      <!-- Example row of columns -->
+      {% block body %}
+      
+      {% endblock %}
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/tests/vendor/jquery.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+  </body>
+</html>

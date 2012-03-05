@@ -1,0 +1,42 @@
+{% extends 'layouts/site-base.html' %}
+
+{% block navbar %}
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li class="active"><a href="#" class="icon home"></a></li>
+              <li><a href="#news">Новости</a></li>
+			  <li class="dropdown">
+              <!--<li class="dropdown open">-->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li><a href="#actions">Спецпредложения</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+			<a class="brand" href="#">IT-СРЕДСТВА</a>
+          </div>
+        </div>
+      </div>
+
+
+    <ul class="breadcrumb">
+      <li class="active">
+        <a href="#">Home</a> <span class="divider">&raquo;</span>
+      </li>
+      <li>
+        <a href="#">Library</a> <span class="divider">&raquo;</span>
+      </li>
+      <li>
+        <a href="#">Data</a>
+      </li>
+    </ul>
+{% endblock %}
